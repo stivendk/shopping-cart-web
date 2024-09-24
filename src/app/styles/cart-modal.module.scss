@@ -1,0 +1,131 @@
+.cartModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    padding: 4rem 1rem 1rem;
+    overflow-y: auto;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cartItem img {
+    width: 50px;
+    height: auto;
+}
+
+.itemDetails {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.quantityControl {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 2rem 0rem;
+}
+
+.quantityValue {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.quantityButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    color: #000;
+    width: 3rem;
+    transition: 0.3s;
+
+    &:hover{
+        transform: scale(2.2);
+    }
+}
+
+.cart-content {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.cartFooter {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 16pt;
+}
+
+.cartFooter p {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0rem;
+}
+
+.payButton {
+    width: 100%;
+    background-color: #ceff7f;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+    font-size: 16pt;
+    transition: 0.3s;
+
+    &:disabled {
+        background-color: #d3d3d3;
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+.closeButton:hover {
+    transform: rotate(-25deg);
+}
+
+.removeCartItem{
+    color: red;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+        transform: rotate(-85deg);
+    }
+}

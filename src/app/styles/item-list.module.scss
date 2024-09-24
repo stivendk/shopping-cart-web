@@ -1,0 +1,189 @@
+.itemList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px; 
+    padding: 3%;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) { 
+        grid-template-columns: 1fr; 
+    }
+}
+
+.item {
+    position: relative;
+    overflow: hidden; 
+    border-radius: 8px;
+    transition: transform 0.5s;
+
+    img {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover;
+        display: block; 
+        transition: transform 0.3s; 
+    }
+
+    .overlay{
+        .detailsWrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transition: transform 0.5s;
+        }
+
+        .firstRow {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px; 
+
+            .itemName {
+                font-weight: bold;
+                align-self: center;
+            }
+
+            .itemPrice {
+                color: #333;
+                align-self: center;
+            }
+        }
+
+        .secondRow {
+            display: flex;
+            justify-content: flex-end;
+
+            .watchButton {
+                border-radius: 20px;
+                padding: 8px 16px;
+                border: none;
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #45a049;
+                }
+            }
+        }
+    }
+
+    
+    @media (min-width: 1025px) {
+        &:hover {
+            img {
+                transform: scale(1.05); 
+            }
+            
+            .overlay {
+                opacity: 1; 
+
+                .detailsWrapper{
+                    padding: 0rem 4rem;
+                }
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 16px;
+            background: rgba(206, 255, 127, 0.8); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            opacity: 0; 
+            transition: opacity 0.3s; 
+        }
+    }
+
+    
+    @media (max-width: 1024px) {
+        .overlay {
+            position: static; 
+            background: rgb(235 235 235 / 80%); 
+            padding: 16px;
+
+            .detailsWrapper {
+                flex-direction: column; 
+                align-items: flex-start; 
+
+                .firstRow {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%; 
+                }
+
+                .secondRow {
+                    justify-content: flex-end; 
+                    width: 100%; 
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto; 
+            object-fit: cover; 
+            display: block;
+        }
+    }
+
+    .watchButton {
+        border-radius: 20px;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        background-color: #4CAF50; 
+        color: white;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #45a049; 
+        }
+    }
+
+    .disabledButton {
+        border-radius: 20px;
+        padding: 8px 16px;
+        border: none;
+        cursor: not-allowed;
+        background-color: #e0e0e0;
+        color: #a0a0a0; 
+    
+        &:hover {
+            background-color: #e0e0e0;
+        }
+    }
+
+    .itemDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8px;
+
+        .itemName {
+            font-weight: bold;
+        }
+
+        .itemPrice {
+            color: #333;
+        }
+    }
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px; 
+}

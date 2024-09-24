@@ -1,0 +1,95 @@
+.paidCartPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    margin: 3rem 10rem;
+    background-color: #F6F6F6;
+    border-radius: 2rem;
+    font-size: 15pt;
+
+    .invoiceTitle {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .cartContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .cartItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            gap: 5rem;
+
+            &:first-child {
+                border-top: none;
+            }
+        }
+
+        .itemImageContainer {
+            flex: 0 0 25%;
+            margin-right: 10px;
+        }
+
+        .itemImage {
+            width: 100%;
+            height: auto;
+            border-radius: 2rem;
+        }
+
+        .itemDetails {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .itemPrice {
+            flex: 0 0 100px;
+            text-align: right;
+        }
+    }
+
+    .cartFooter {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .totalLabel {
+        flex: 1;
+    }
+
+    .totalPrice {
+        flex: 0 0 100px;
+        text-align: right;
+    }
+}
+
+.btnBack {
+    padding: 1rem;
+
+    button {
+        padding: 1rem;
+        border-radius: 2rem;
+        font-size: 13pt;
+        background-color: #CFFF7F;
+        cursor: pointer;
+        border: none;
+        color: #000;
+        font-weight: bold;
+        transition: 0.3s;
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 1px 6px 12px #ccc;
+        }
+    }
+}

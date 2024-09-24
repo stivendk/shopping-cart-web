@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+}
+
+.backButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    padding: 1rem;
+    color: #000;
+    transition: 0.3s;
+
+    span {
+        font-size: 40pt;
+    }
+
+    &:hover{
+        transform: translateX(20px);
+    }
+}
+
+.title {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.details {
+    display: flex;
+    width: 100%;
+}
+
+.imageColumn {
+    flex: 1;
+}
+
+.image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.infoColumn {
+    flex: 1;
+    padding-left: 20px;
+    align-self: end;
+}
+
+.quantityInput {
+    width: 40px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 16pt;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+.addToCartButton {
+    background-color: #ceff7f;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    float: inline-end;
+    transition: 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.disabledButton {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    float: inline-end;
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+}
+
+.quantityControl {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 2rem 0rem;
+}
+
+.quantityButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    color: #000;
+    width: 3rem;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(2.2);
+    }
+}
+
+.quantityValue {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}

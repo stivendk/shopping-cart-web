@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shopping Cart Web
 
-## Getting Started
+Este proyecto es el frontend para la API de carrito de compras. Está construido con React y Next.js usando TypeScript.
 
-First, run the development server:
+## Características
+- Interfaz de usuario para gestionar items y carritos.
+- Consultas a la API para obtener, crear, editar y eliminar items y carritos.
+- Manejo de estado usando React Context (o el estado de tu preferencia).
+- Diseño responsivo y accesible.
+- Integración con la API desarrollada en NestJS y SQLite (puerto: `3000`).
+
+## Requisitos
+- Node.js v20 o superior.
+- npm o yarn (gestor de paquetes).
+- API del carrito de compras corriendo en el puerto `3000` (puedes revisar README del backend para más información).
+
+## Configuración del proyecto
+1. Clona el repositorio
+```bash
+git clone https://github.com/stivendk/shopping-cart-web.git
+```
+2. Accede al directorio del proyecto
+```bash
+cd shopping-cart-web
+```
+3. Instala las dependencias
+
+Si utilizas npm:
+```bash
+npm install
+```
+
+Si utilizas yarn:
+```bash
+yarn install
+```
+
+4. Inicia la aplicación en desarrollo
+
+Si utilizas npm:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Si utilizas yarn:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+yarn dev
+```
+El proyecto estará disponible en: http://localhost:4200
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts Disponibles
+- dev: Inicia el entorno de desarrollo.
+- build: Compila el proyecto para producción.
+- start: Inicia la aplicación en producción (requiere primero npm run build).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Interacción con la API
+El frontend se comunica con la API de carrito de compras a través de los siguientes endpoints:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Endpoints
+- GET /items: Obtiene la lista de items.
+- GET /items/: Obtiene un item por su ID.
+- PUT /carts/: Modifica el carrito activo.
+- GET /carts/active: Obtiene el carrito activo.
+- PUT /cart-items/: Actualiza la cantidad de un item en el carrito.

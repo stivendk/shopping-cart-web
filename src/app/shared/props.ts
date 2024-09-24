@@ -1,0 +1,3 @@
+interface onClickEvent {
+    onClick: () => void;
+}
